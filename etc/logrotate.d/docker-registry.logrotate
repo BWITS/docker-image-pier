@@ -1,0 +1,7 @@
+/export/log/docker-registry/*.log {
+    daily
+    rotate 4
+    missingok
+    compress
+    minsize 100k
+}

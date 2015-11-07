@@ -1,0 +1,54 @@
+﻿一、添加可执行权限
+chmod +x install.sh
+
+二、设置docker-registry flavor
+vim install.sh
+# set flavor
+export SETTINGS_FLAVOR=jssstorage
+
+三、安装install.sh脚本
+
+四、修改配置文件
+vim /etc/docker-registry/config.yml
+配置jssstorage相关信息
+配置mysql相关信息 sqlalchemy_index_database
+
+五、设置docker-registry参数
+vim /etc/init.d/docker-registry
+修改 LISTEN_IP LISTEN_PORT
+后面以 10.23.54.14:5060 为例
+
+六、重启docker-registry
+/etc/init.d/docker-registry restart
+
+
+七、验证docker-registry服务
+curl http://127.0.0.1:5060/v1/_ping
+
+八、上传镜像
+docker load < centos6.5-ssh
+docker images
+docker tag centos6.5-ssh 10.23.54.14:5060/centos6.5-ssh
+docker push 10.23.54.14:5060/centos6.5-ssh
+
+九、下载镜像
+docker pull 10.23.54.14:5060/centos6.5-ssh
+
+十、测试docker-registry服务常用命令
+1)测试docker-registry服务是否正常
+curl http://127.0.0.1:5060/_ping
+curl http://127.0.0.1:5060/v1/_ping
+
+2)测试依赖包的版本
+curl http://127.0.0.1:5060/_versions
+curl http://127.0.0.1:5060/v1/_versions
+
+3)测试docker-registry版本以及flavor
+curl http://127.0.0.1:5060/
+
+4)查询docker-registry保存的镜像
+curl http://127.0.0.1:5060/v1/search
+
+5)查询docker-registry存储和redis的状态
+curl http://127.0.0.1:5060/_status
+curl http://127.0.0.1:5060/v1/_status
