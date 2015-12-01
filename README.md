@@ -1,2 +1,4 @@
-# docker-image-pier
-pier for docker images
+
+instruction：
+
+http://dockone.io/article/866

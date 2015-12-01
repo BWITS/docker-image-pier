@@ -18,7 +18,7 @@ common: &common
     search_backend: SEARCH_BACKEND
     # SQLite search backend
     #sqlalchemy_index_database: sqlite:////export/docker-registry/docker-registry.db
-    sqlalchemy_index_database: mysql://root@127.0.0.1:3306/registry
+    sqlalchemy_index_database: mysql://root:zxc@mysql:3306/registry
 
     # Mirroring is not enabled
     mirroring:
@@ -71,7 +71,7 @@ common: &common
 local: &local
     <<: *common
     storage: local
-    storage_path: /data/jipstorage/
+    storage_path: /docker-registry/localdata/
 
 
 s3: &s3
