@@ -3,11 +3,17 @@
 ### 特性：
 
 1、基于 docker-registry v1
+
 2、新增：支持 https 协议，支持自颁发证书
+
 3、新增：支持 basic auth，基于 nginx
+
 4、修改：默认接入 mysql，新增 tag、layer 、cnt（layer 的依赖数）表 
+
 5、新增：支持通过原删除 tag 的 api 同时删除该tag相关Layer （不删除有其他 tag 依赖的 layer） 节省存储资源
+
 6、新增：查询接口，allnamespaces 、alltags by namespace
+
 
 ### 部署过程：
 
