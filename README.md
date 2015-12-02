@@ -46,7 +46,7 @@ docker run -d --name=registry -v /docker-registry/localconfig/:/docker-registry/
 
 refer: https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04
 
-! [Alt tag] (http://note.youdao.com/yws/public/resource/6b820b6afed5c9a1c5e2807129f6a6ed/E2384F91BA8348D999D1DC686218084B)
+![alt tag](http://note.youdao.com/yws/public/resource/6b820b6afed5c9a1c5e2807129f6a6ed/E2384F91BA8348D999D1DC686218084B)
 
 ### push images to private registry server:
 ```
