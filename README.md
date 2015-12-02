@@ -61,7 +61,8 @@ mysql > select * from layer;
 mysql > select * from tag;
 mysql > exit
 ```
-! [Alt tag] (http://note.youdao.com/yws/public/resource/6b820b6afed5c9a1c5e2807129f6a6ed/2C6AF81600DC47EB8B700DB7EB8A7571)
+
+![alt tag](http://note.youdao.com/yws/public/resource/6b820b6afed5c9a1c5e2807129f6a6ed/2C6AF81600DC47EB8B700DB7EB8A7571)
 
 ### delete image via API
 ```
